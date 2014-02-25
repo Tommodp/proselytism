@@ -1,6 +1,6 @@
 module Proselytism
 
-  class Logger < ActiveSupport::BufferedLogger
+  class Logger < ActiveSupport::Logger
     class Formatter
       def call(severity, time, progname, msg)
         formatted_time = time.strftime("%Y-%m-%d %H:%M:%S.") << time.usec.to_s[0..2].rjust(3)
